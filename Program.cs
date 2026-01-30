@@ -42,7 +42,7 @@ static async Task ProcessarTrailingAsync()
 
         if (PosicoesPendentes.Count == 0) return;
 
-        Console.WriteLine($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")} tem posições para analisar...");
+        //Console.WriteLine($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")} tem posições para analisar...");
 
         //cria o ambiente
         BinanceRestClient clientUsuarioBase = BinanceTrade.CriaClient(1);
@@ -103,7 +103,7 @@ static async Task ExecutaTrailingAsync(BinanceRestClient clientUsuarioBase, Bina
     var precoMargem = pos.PrecoVenda * (1 + passo);
     var novoPrecoVenda = precoAtual * (1 - colchao);
 
-    Console.WriteLine($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")} Cripto: {cripto.CodigoPar} TP ordem: {pos.OrdemVenda} preco atual: {precoAtual}  Preco Margem: {precoMargem} novo preco de venda: {novoPrecoVenda}...");
+    //Console.WriteLine($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")} Cripto: {cripto.CodigoPar} TP ordem: {pos.OrdemVenda} preco atual: {precoAtual}  Preco Margem: {precoMargem} novo preco de venda: {novoPrecoVenda}...");
 
     if (precoAtual >= precoMargem)
     {
